@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict Fuel Consumption</title>
+</head>
+<body>
+    <h1>Predict Fuel Consumption</h1>
+    <form action="{{url_for('predict')}}" method="post">
+        <input type="text" name="make" placeholder="Enter Make" required><br>
+        <input type="text" name="model" placeholder="Enter Model" required><br>
+        <input type="text" name="vehicle_class" placeholder="Enter Vehicle Class" required><br>
+        <input type="text" name="engine_size" placeholder="Enter Engine Size" required><br>
+        <input type="text" name="cylinders" placeholder="Enter Cylinders" required><br>
+        <input type="text" name="transmission" placeholder="Enter Transmission" required><br>
+        <input type="text" name="fuel" placeholder="Enter Fuel Type" required><br>
+        <input type="text" name="coemissions" placeholder="Enter Coemissions" required><br>
+        <button type="submit">Predict</button>
+    </form>
+    <h3>{{prediction_text}}</h3>
+</body>
+</html>
